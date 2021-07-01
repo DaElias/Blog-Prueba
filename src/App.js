@@ -8,7 +8,8 @@ import Blog from "./Componet/Blog";
 import Acerca_de from "./Componet/Acerca_de";
 import Error404 from './Componet/Error404';
 //* styled component
-import { Container, ContainerElemt, Nav,PP } from "./Componet/StyledComponet/Styled-Component";
+import { Container, ContainerElemt, Nav, PP } from "./Componet/StyledComponet/Styled-Component";
+import ExampleBlog1 from "./data/ExampleBlog1";
 
 
 
@@ -43,7 +44,9 @@ function App() {
 
 
         <Route path="/Acerca-de" component={Acerca_de} />
-        
+
+        <Route path={"/Blogs/:id"} component={ExamplePage} />
+
         <Route component={Error404} />
 
       </Switch>

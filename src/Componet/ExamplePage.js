@@ -1,8 +1,9 @@
 import React from "react";
-
-const ExamplePage=({props})=>{
-
-    return(
+import { useParams } from "react-router";
+const ExamplePage = ({ props }) => {
+    const { id }=useParams();
+    console.log(id);
+    return (
         <>
         </>
     )
