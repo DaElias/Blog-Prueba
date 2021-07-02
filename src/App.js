@@ -45,7 +45,7 @@ function App() {
 
         <Route path="/Acerca-de" component={Acerca_de} />
 
-        <Route path={"/Blogs/:id"} component={ExamplePage} />
+        <Route path={"/Blogs-Post/:id"} component={ExamplePage} />
 
         <Route component={Error404} />
 

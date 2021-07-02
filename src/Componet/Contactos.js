@@ -1,23 +1,22 @@
 import { ContainerElemt } from "./StyledComponet/Styled-Component";
 
-
-const Contacto = () => {
+const Contacto = ({props=["Juan",'Mario','Ronal','Marcos','Camilo']}) => {
     return (<>
         <ContainerElemt>
             <h2> Contactos</h2>
             <p>
                 <ul>
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
+                    {props.map((index)=>{
+                        return<li >{index}</li>
+                    })}
                 </ul>
             </p>
         </ContainerElemt>
 
     </>)
 }
+
+
 
 
 export default Contacto;
