@@ -1,4 +1,7 @@
 import styled from "styled-components";
+import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAddressBook, faFeather, faAddressCard, faXRay } from '@fortawesome/free-solid-svg-icons'
 
 //* Styled-componet
 
@@ -25,6 +28,8 @@ font-family: 'Roboto', sans-serif;
   background-color: #dcdde1;
   margin: 3px;
   margin-top: 140px;
+  align-items: stretch;
+
 `;
 
 const Nav = styled.nav`
@@ -56,10 +61,52 @@ font-family: 'Kanit', sans-serif;
   }
 `;
 
-const PP=styled.p`
+const PP = styled.p`
   margin: 0px;
   text-indent: 3ch;
 `;
 
+const Footer = styled.div`
+ background: #273c75;
+ display: flex;
+ height: auto;
+ color: black; 
+ align-items: center;
+ flex-direction: column;
 
-export  { Container, ContainerElemt, Nav,PP };
+ footer{
+   background-color: white;
+   width: 100%;
+   height: auto;
+   display: flex;
+  align-items: flex-end;
+  justify-content: center;
+ }
+ .Footer{
+   margin: 20px 0px 10px 0px;
+   font-size: 24px;
+   color: white;
+ }
+ svg{
+   margin: 0px 5px;
+ }
+`;
+//*  Component React Footer
+const FooterComponent = () => {
+  return <Footer>
+    <div className="Footer">
+      <FontAwesomeIcon icon={faAddressBook} />
+      <FontAwesomeIcon icon={faFeather} />
+      <FontAwesomeIcon icon={faAddressCard} />
+      <FontAwesomeIcon icon={faXRay} />
+
+    </div>
+    <footer>
+      Blog de Prueba 2021 Copyright © Todos los derechos reservados
+    </footer>
+
+  </Footer>
+}
+
+
+export { Container, ContainerElemt, Nav, PP, FooterComponent };
